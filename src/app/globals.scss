@@ -1,6 +1,18 @@
 :root {
   --font-family: "JetBrains Mono", sans-serif;
-  --lavender: #f6f4ff;
+
+  --text-primary: #000000;
+  --text-secondary: #878787;
+  --white: #ffffff;
+  --light-grey: #f6f6f6;
+  --lavender-100: #f6f4ff;
+  --lavender-300: #e1cdff;
+  --yellow: #fde253;
+  --pink: #fdc2f6;
+  --purple: #725cee;
+  --purple-200: #dadafe;
+  --orange: #fbc125;
+  --teal: #19c2ab;
 }
 
 @font-face {
@@ -38,7 +50,7 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--lavender);
+  background-color: var(--lavender-200);
 }
 
 * {
