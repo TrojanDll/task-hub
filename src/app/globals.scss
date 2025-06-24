@@ -1,10 +1,13 @@
 :root {
   --font-family: "JetBrains Mono", sans-serif;
 
+  --primary: #725cee;
   --text-primary: #000000;
   --text-secondary: #878787;
+  --main-bg: #f6f4ff;
   --white: #ffffff;
   --light-grey: #f6f6f6;
+  --light-grey-hover: #ededed;
   --lavender-100: #f6f4ff;
   --lavender-300: #e1cdff;
   --yellow: #fde253;
@@ -13,44 +16,62 @@
   --purple-200: #dadafe;
   --orange: #fbc125;
   --teal: #19c2ab;
+
+  .dark,
+  .dark * {
+    --text-primary: #ffffff;
+    --main-bg: #18181a;
+  }
 }
 
 @font-face {
   font-display: swap;
-  font-family: "JetBrains Mono";
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 200;
+  src: url("/fonts/roboto-v48-cyrillic_latin-200.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url("/fonts/jetbrains-mono-v23-cyrillic_latin-regular.woff2")
-    format("woff2");
+  src: url("/fonts/roboto-v48-cyrillic_latin-regular.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: "JetBrains Mono";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url("/fonts/jetbrains-mono-v23-cyrillic_latin-500.woff2") format("woff2");
+  src: url("/fonts/roboto-v48-cyrillic_latin-500.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: "JetBrains Mono";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 600;
-  src: url("/fonts/jetbrains-mono-v23-cyrillic_latin-600.woff2") format("woff2");
+  src: url("/fonts/roboto-v48-cyrillic_latin-600.woff2") format("woff2");
 }
 
 @font-face {
   font-display: swap;
-  font-family: "JetBrains Mono";
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url("/fonts/jetbrains-mono-v23-cyrillic_latin-700.woff2") format("woff2");
+  src: url("/fonts/roboto-v48-cyrillic_latin-700.woff2") format("woff2");
+}
+
+html {
+  font-size: 16px;
 }
 
 body {
   font-family: var(--font-family);
-  background-color: var(--lavender-200);
+  background-color: var(--main-bg);
+  color: var(--text-primary);
 }
 
 * {

@@ -1,0 +1,38 @@
+.root {
+  background-color: var(--light-grey);
+  width: 100%;
+  border-radius: 999px;
+  padding: 6px;
+  padding-right: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align-last: left;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--light-grey-hover);
+  }
+}
+
+.wrapper {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.profileImage {
+  width: 36px;
+  height: 36px;
+  background-color: var(--primary);
+  border-radius: 100%;
+}
+
+.name {
+  font-size: 0.875rem;
+}
+
+.email {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
