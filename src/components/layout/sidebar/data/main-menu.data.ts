@@ -1,4 +1,13 @@
-import { ChartNoAxesColumn, LayoutGrid, MessageCircleMore } from "lucide-react";
+import {
+  CalendarDays,
+  ChartNoAxesColumn,
+  ChartNoAxesColumnIncreasing,
+  LayoutGrid,
+  MessageCircleMore,
+  NotebookPen,
+  Settings,
+  Users,
+} from "lucide-react";
 import type { IMenuItem } from "../../menu/menu.types";
 import { Pages } from "@/config/pages";
 
@@ -10,32 +19,32 @@ export const MAIN_MENU: IMenuItem[] = [
   },
   {
     icon: MessageCircleMore,
-    label: "Dashboard",
-    href: Pages.DASHBOARD,
+    label: "Messages",
+    href: Pages.MESSAGES,
   },
   {
-    icon: ChartNoAxesColumn,
-    label: "Dashboard",
-    href: Pages.DASHBOARD,
+    icon: ChartNoAxesColumnIncreasing,
+    label: "Insight",
+    href: Pages.INSIGHT,
   },
   {
-    icon: LayoutGrid,
-    label: "Dashboard",
-    href: Pages.DASHBOARD,
+    icon: Users,
+    label: "Team",
+    href: Pages.TEAM,
   },
   {
-    icon: LayoutGrid,
-    label: "Dashboard",
-    href: Pages.DASHBOARD,
+    icon: CalendarDays,
+    label: "Schedule",
+    href: Pages.SCHEDULE,
   },
   {
-    icon: LayoutGrid,
-    label: "Dashboard",
-    href: Pages.DASHBOARD,
+    icon: NotebookPen,
+    label: "Report",
+    href: Pages.REPORT,
   },
   {
-    icon: LayoutGrid,
-    label: "Dashboard",
-    href: Pages.DASHBOARD,
+    icon: Settings,
+    label: "Settings",
+    href: Pages.SETTINGS,
   },
 ];

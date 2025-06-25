@@ -1,0 +1,21 @@
+.menuItemLink {
+  padding: 11px;
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  align-items: center;
+  border-radius: 99px;
+}
+
+.menuItemLabel {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.active {
+  background-color: var(--primary);
+  .menuItemLabel {
+    color: var(--white);
+  }
+}
