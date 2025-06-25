@@ -19,6 +19,6 @@ export const PROJECTS: IProject[] = [
   },
   {
     name: "Branding",
-    color: "var(--teal)",
+    color: "var(--teal-600)",
   },
 ];
