@@ -9,7 +9,7 @@ import ThemeToggler from "@/components/ui/ThemeToggler/ThemeToggler";
 export default function Dashboard() {
   return (
     <div className={styles.root}>
-      <Heading>Dashboard</Heading>
+      <Heading>Панель задач</Heading>
 
       <div className={styles.right}>
         <SearchField onChange={() => {}} value="" />

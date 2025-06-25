@@ -4,3 +4,10 @@
   opacity: 0.5;
   font-size: 0.875rem;
 }
+
+:global(.dark) {
+  .root {
+    opacity: 1;
+    color: var(--grey-500-dark);
+  }
+}

@@ -14,37 +14,37 @@ import { Pages } from "@/config/pages";
 export const MAIN_MENU: IMenuItem[] = [
   {
     icon: LayoutGrid,
-    label: "Dashboard",
+    label: "Панель задач",
     href: Pages.DASHBOARD,
   },
   {
     icon: MessageCircleMore,
-    label: "Messages",
+    label: "Сообщения",
     href: Pages.MESSAGES,
   },
   {
     icon: ChartNoAxesColumnIncreasing,
-    label: "Insight",
+    label: "Аналитика",
     href: Pages.INSIGHT,
   },
   {
     icon: Users,
-    label: "Team",
+    label: "Команда",
     href: Pages.TEAM,
   },
   {
     icon: CalendarDays,
-    label: "Schedule",
+    label: "Расписание",
     href: Pages.SCHEDULE,
   },
   {
     icon: NotebookPen,
-    label: "Report",
+    label: "Отчёт",
     href: Pages.REPORT,
   },
   {
     icon: Settings,
-    label: "Settings",
+    label: "Настройки",
     href: Pages.SETTINGS,
   },
 ];

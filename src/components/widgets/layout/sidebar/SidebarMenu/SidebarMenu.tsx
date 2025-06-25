@@ -25,7 +25,7 @@ export default function SidebarMenu() {
               <menuItem.icon size={20} className={styles.icon} />
               <div className={styles.menuItemLabel}>{menuItem.label}</div>
 
-              {menuItem.label === "Messages" && <span>4</span>}
+              {menuItem.label === "Сообщения" && <span>4</span>}
             </Link>
           </li>
         ))}

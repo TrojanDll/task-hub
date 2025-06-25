@@ -13,7 +13,7 @@ interface IProps {
 export default function SearchField({
   onChange,
   value,
-  placeholder = "Search something... ",
+  placeholder = "Найти что-нибудь... ",
 }: IProps) {
   return (
     <div className={styles.root}>

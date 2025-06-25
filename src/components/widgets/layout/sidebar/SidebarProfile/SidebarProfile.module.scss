@@ -36,3 +36,13 @@
   color: var(--text-secondary);
   font-size: 0.75rem;
 }
+
+:global(.dark) {
+  .root {
+    background-color: var(--grey-700-dark);
+
+    &:hover {
+      background-color: var(--grey-600-dark);
+    }
+  }
+}

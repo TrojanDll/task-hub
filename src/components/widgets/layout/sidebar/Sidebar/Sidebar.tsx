@@ -10,15 +10,15 @@ import SidebarProjects from "../SidebarProjects/SidebarProjects";
 export default function Sidebar() {
   return (
     <aside className={styles.root}>
-      <SidebarHeading title="Account" className={styles.heading} />
+      <SidebarHeading title="Аккаунт" className={styles.heading} />
 
       <SidebarProfile />
 
-      <SidebarHeading title="Main menu" className={styles.heading} />
+      <SidebarHeading title="Главное меню" className={styles.heading} />
 
       <SidebarMenu />
 
-      <SidebarHeading title="Projects" className={styles.heading} />
+      <SidebarHeading title="Проекты" className={styles.heading} />
 
       <SidebarProjects />
     </aside>

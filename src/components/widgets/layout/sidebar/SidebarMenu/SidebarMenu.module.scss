@@ -11,6 +11,10 @@
   align-items: center;
   border-radius: 99px;
 
+  &:hover {
+    background-color: var(--light-grey-hover);
+  }
+
   & span {
     position: absolute;
     right: 11px;
@@ -31,7 +35,6 @@
 .menuItemLabel {
   color: var(--text-secondary);
   font-size: 0.875rem;
-  // font-weight: 500;
 }
 
 .active {
@@ -43,5 +46,41 @@
 
   .icon {
     color: var(--white);
+  }
+
+  &:hover {
+    background-color: var(--primary);
+  }
+}
+
+:global(.dark) {
+  .menuItemLink {
+    &:hover {
+      background-color: var(--grey-600-dark);
+    }
+  }
+
+  .menuItemLabel {
+    color: var(--text-secondary-dark);
+  }
+
+  .icon {
+    color: var(--text-secondary-dark);
+  }
+
+  .active {
+    .menuItemLabel {
+      color: var(--white);
+    }
+
+    .icon {
+      color: var(--white);
+    }
+  }
+
+  .active {
+    &:hover {
+      background-color: var(--primary);
+    }
   }
 }
