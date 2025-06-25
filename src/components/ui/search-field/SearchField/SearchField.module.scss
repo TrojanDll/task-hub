@@ -6,6 +6,7 @@
   background-color: var(--white);
   border-radius: 99px;
   padding: 10px;
+  box-shadow: var(--shadow);
 }
 
 .icon {
@@ -25,7 +26,11 @@
 }
 
 :global(.dark) {
-  .icon {
-    color: var(--primary);
+  .root {
+    background-color: var(--dark);
+  }
+
+  .input {
+    color: var(--white);
   }
 }

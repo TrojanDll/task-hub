@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.scss";
 
 import { SITE_NAME } from "@/constants/seo.constants";
+import { getTheme } from "@/helpers/theme/theme.helper";
+import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   icons: {
@@ -21,8 +23,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className="">{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

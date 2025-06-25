@@ -3,9 +3,12 @@
 
   --primary: #725cee;
   --primary-200: #dadafe;
+  --dark: #404045;
   --text-primary: #000000;
+  --text-primary-dark: #ffffff;
   --text-secondary: #878787;
   --main-bg: #f6f4ff;
+  --main-bg-dark: #212327;
   --white: #ffffff;
   --light-grey: #f6f6f6;
   --light-grey-hover: #ededed;
@@ -18,12 +21,7 @@
   --orange: #fbc125;
   --teal: #19c2ab;
   --teal-600: #03846d;
-
-  .dark,
-  .dark * {
-    --text-primary: #ffffff;
-    --main-bg: #18181a;
-  }
+  --shadow: 1px 1px 4px 0px rgba(34, 60, 80, 0.14);
 }
 
 @font-face {
@@ -74,6 +72,13 @@ body {
   font-family: var(--font-family);
   background-color: var(--main-bg);
   color: var(--text-primary);
+}
+
+.dark {
+  body {
+    background-color: var(--main-bg-dark);
+    color: var(--text-primary-dark);
+  }
 }
 
 * {
