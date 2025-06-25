@@ -1,10 +1,31 @@
+.menuItem {
+  margin-top: 6px;
+}
+
 .menuItemLink {
+  position: relative;
   padding: 11px;
   display: flex;
   width: 100%;
   gap: 10px;
   align-items: center;
   border-radius: 99px;
+
+  & span {
+    position: absolute;
+    right: 11px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: var(--primary-200);
+    color: var(--primary);
+    padding: 3px 8px;
+    border-radius: 99px;
+    font-size: 0.625rem;
+  }
+}
+
+.icon {
+  color: var(--text-secondary);
 }
 
 .menuItemLabel {
@@ -15,7 +36,12 @@
 
 .active {
   background-color: var(--primary);
+
   .menuItemLabel {
+    color: var(--white);
+  }
+
+  .icon {
     color: var(--white);
   }
 }

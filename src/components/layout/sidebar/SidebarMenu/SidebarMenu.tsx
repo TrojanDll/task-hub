@@ -22,15 +22,10 @@ export default function SidebarMenu() {
               )}
               href={menuItem.href}
             >
-              <menuItem.icon
-                size={20}
-                color={`${
-                  i === activeItemIndex
-                    ? "var(--white)"
-                    : "var(--text-secondary)"
-                }`}
-              />
+              <menuItem.icon size={20} className={styles.icon} />
               <div className={styles.menuItemLabel}>{menuItem.label}</div>
+
+              {menuItem.label === "Messages" && <span>4</span>}
             </Link>
           </li>
         ))}
