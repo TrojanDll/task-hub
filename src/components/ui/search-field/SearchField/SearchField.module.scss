@@ -1,0 +1,31 @@
+.root {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 290px;
+  background-color: var(--white);
+  border-radius: 99px;
+  padding: 10px;
+}
+
+.icon {
+  color: var(--text-secondary);
+  margin-right: 8px;
+}
+
+.input {
+  width: 100%;
+  font-size: 0.875rem;
+  background: transparent;
+  outline: none;
+
+  &::placeholder {
+    color: var(--text-secondary);
+  }
+}
+
+:global(.dark) {
+  .icon {
+    color: var(--primary);
+  }
+}
