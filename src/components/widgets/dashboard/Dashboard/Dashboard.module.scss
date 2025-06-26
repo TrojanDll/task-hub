@@ -1,4 +1,9 @@
 .root {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7,4 +12,11 @@
 .right {
   display: flex;
   column-gap: 16px;
+}
+
+.statsWrapper {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 12px;
 }

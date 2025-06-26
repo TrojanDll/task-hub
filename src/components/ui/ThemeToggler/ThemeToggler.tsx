@@ -10,7 +10,7 @@ export default function ThemeToggler() {
   return (
     <button
       className={styles.root}
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+      onClick={() => setTheme(theme === "light" ? "dark" : "light")}
     >
       {theme === "light" ? (
         <Sun className={styles.icon} />
