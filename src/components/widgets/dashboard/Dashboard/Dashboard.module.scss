@@ -3,6 +3,10 @@
   grid-template-columns: 4fr 1fr;
 }
 
+.main {
+  padding: 20px;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -17,6 +21,16 @@
 .statsWrapper {
   margin-top: 24px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: minmax(0, 250px) 2fr;
   gap: 12px;
+}
+
+// .projectStats {
+//   width: min(250px, 100%);
+// }
+
+.chat {
+  height: 100%;
+  // min-height: 100vh;
+  background-color: var(--primary-500);
 }
