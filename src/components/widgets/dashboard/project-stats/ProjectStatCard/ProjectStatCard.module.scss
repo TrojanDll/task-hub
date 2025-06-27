@@ -8,7 +8,7 @@
 .text {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   gap: 8px;
 }
 
@@ -21,3 +21,13 @@
   // font-weight: 500;
   font-size: 0.875rem;
 }
+
+// :global(.dark) {
+//   // .heading {
+//   //   color: var(--text-primary);
+//   // }
+
+//   // .text {
+//   //   color: var(--text-primary);
+//   // }
+// }

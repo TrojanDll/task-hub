@@ -27,6 +27,7 @@
   --text-primary-dark: #ffffff;
   --text-secondary-dark: #c8c8c8;
   --text-secondary-dark: #c8c8c8;
+  --primary-400-dark: #1b1465;
   --grey-500-dark: #a3a2a2;
   --grey-600-dark: #4b4b4b;
   --grey-700-dark: #404040;
@@ -88,6 +89,10 @@ body {
     background-color: var(--main-bg-dark);
     color: var(--text-primary-dark);
   }
+
+  --yellow: #d4b122;
+  --pink: #d460c2;
+  --lavender-300: #6b43a6;
 }
 
 * {
