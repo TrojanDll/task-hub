@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.scss";
 
 import { SITE_NAME } from "@/constants/seo.constants";
-import { getTheme } from "@/helpers/theme/theme.helper";
 import { Providers } from "./providers";
 
 export const metadata: Metadata = {

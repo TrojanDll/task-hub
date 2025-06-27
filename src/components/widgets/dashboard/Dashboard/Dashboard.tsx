@@ -6,6 +6,7 @@ import Heading from "@/components/ui/Heading/Heading";
 import SearchField from "@/components/ui/search-field/SearchField/SearchField";
 import ThemeToggler from "@/components/ui/ThemeToggler/ThemeToggler";
 import ProjectStats from "../project-stats/ProjectStats/ProjectStats";
+import ProjectChart from "../project-chart/ProjectChart/ProjectChart";
 
 export default function Dashboard() {
   return (
@@ -24,7 +25,7 @@ export default function Dashboard() {
           <div className={styles.statsWrapper}>
             <ProjectStats className={styles.projectStats} />
 
-            <div>chart</div>
+            <ProjectChart />
           </div>
         </div>
       </div>

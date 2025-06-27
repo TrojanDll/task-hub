@@ -1,0 +1,11 @@
+.root {
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 14px;
+}
+
+:global(.dark) {
+  .root {
+    background-color: var(--dark);
+  }
+}
