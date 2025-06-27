@@ -4,6 +4,6 @@ interface ITimeRange {
 }
 
 interface IChartDataPoint {
-  month: string;
+  period: string;
   value: number;
 }

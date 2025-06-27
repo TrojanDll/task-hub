@@ -4,12 +4,13 @@ import React from "react";
 
 import cn from "clsx";
 import styles from "./CustomSelect.module.scss";
+import type { ISelectOption } from "../custom-select.types";
 
 interface IProps {
   className?: string;
-  defaultValue?: string;
-  value: string;
-  setValue: (value: string) => void;
+  defaultValue?: ISelectOption;
+  value: ISelectOption;
+  setValue: (value: ISelectOption) => void;
   options?: ISelectOption[];
 }
 
@@ -20,13 +21,23 @@ export default function CustomSelect({
   value,
   setValue,
 }: IProps) {
+  const handleValueChange = (selectedValue: string) => {
+    // Находим полный объект option по значению
+    const selectedOption = options.find(
+      (option) => option.value === selectedValue
+    );
+    if (selectedOption) {
+      setValue(selectedOption); // Теперь передаем полный объект
+    }
+  };
+
   return (
     <Select.Root
-      value={value}
-      onValueChange={(handledValue: string) => setValue(handledValue)}
+      value={value.value}
+      onValueChange={(handledValue: string) => handleValueChange(handledValue)}
     >
       <Select.Trigger className={cn(styles.SelectTrigger, className)}>
-        <Select.Value defaultValue={defaultValue} placeholder="Период" />
+        <Select.Value defaultValue={defaultValue?.value} placeholder="Период" />
         <Select.Icon className={styles.SelectIcon}>
           <ChevronDownIcon size={14} />
         </Select.Icon>
@@ -40,7 +51,11 @@ export default function CustomSelect({
         >
           <Select.Viewport className={styles.SelectViewport}>
             {options.map((option) => (
-              <Select.Item className={styles.SelectItem} value={option.value}>
+              <Select.Item
+                key={`${option.value}_${option.label}`}
+                className={styles.SelectItem}
+                value={option.value}
+              >
                 <Select.ItemText className={styles.ItemText}>
                   {option.label}
                 </Select.ItemText>

@@ -1,18 +1,18 @@
 export const yearlyData: IChartDataPoint[] = [
-  { month: "Янв", value: 19 },
-  { month: "Фев", value: 14 },
-  { month: "Мар", value: 27 },
-  { month: "Апр", value: 38 },
-  { month: "Май", value: 35 },
-  { month: "Июн", value: 20 },
-  { month: "Июл", value: 23 },
+  { period: "Янв", value: 19 },
+  { period: "Фев", value: 14 },
+  { period: "Мар", value: 20 },
+  { period: "Апр", value: 38 },
+  { period: "Май", value: 35 },
+  { period: "Июн", value: 20 },
+  { period: "Июл", value: 23 },
 ];
 
 export const monthlyData: IChartDataPoint[] = [
-  { month: "Неделя 1", value: 12 },
-  { month: "Неделя 2", value: 19 },
-  { month: "Неделя 3", value: 15 },
-  { month: "Неделя 4", value: 25 },
+  { period: "Неделя 1", value: 12 },
+  { period: "Неделя 2", value: 19 },
+  { period: "Неделя 3", value: 15 },
+  { period: "Неделя 4", value: 25 },
 ];
 
 export const timeRanges: ITimeRange[] = [
