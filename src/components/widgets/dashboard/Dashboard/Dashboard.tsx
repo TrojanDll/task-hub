@@ -29,7 +29,7 @@ export default function Dashboard() {
         </div>
       </div>
 
-      <div className={styles.chat}>CHAT</div>
+      {/* <div className={styles.chat}>CHAT</div> */}
     </div>
   );
 }
