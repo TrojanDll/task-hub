@@ -1,0 +1,13 @@
+.heading {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.tasksCount {
+  color: var(--text-secondary);
+}
+
+.tasks {
+  margin-top: 16px;
+}

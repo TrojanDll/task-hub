@@ -7,6 +7,7 @@ import SearchField from "@/components/ui/search-field/SearchField/SearchField";
 import ThemeToggler from "@/components/ui/ThemeToggler/ThemeToggler";
 import ProjectStats from "../project-stats/ProjectStats/ProjectStats";
 import ProjectStatisticsChart from "../project-chart/ProjectStatisticsChart/ProjectStatisticsChart";
+import LastTasks from "../last-tasks/LastTasks/LastTasks";
 
 export default function Dashboard() {
   return (
@@ -26,6 +27,8 @@ export default function Dashboard() {
             <ProjectStats className={styles.projectStats} />
             <ProjectStatisticsChart />
           </div>
+
+          <LastTasks className={styles.lastTasks} />
         </div>
       </div>
 
