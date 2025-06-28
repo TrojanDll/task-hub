@@ -1,0 +1,26 @@
+.topInfo {
+  display: flex;
+}
+
+.left {
+  display: flex;
+  column-gap: 6px;
+  align-items: center;
+  max-width: 60%;
+}
+
+.iconWrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100%;
+  background-color: var(--primary-100);
+}
+
+.duration {
+  margin-top: 5px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}

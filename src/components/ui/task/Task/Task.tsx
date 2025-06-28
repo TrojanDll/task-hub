@@ -1,11 +1,48 @@
 import type { ITask } from "@/types/task.types";
 import styles from "./Task.module.scss";
 import cn from "clsx";
+import CustomTitle from "../../CustomTitle/CustomTitle";
+import { differenceInDays } from "date-fns";
+import Image from "next/image";
+import Substrate from "../../Substrate/Substrate";
 
 interface IProps {
   task: ITask;
+  className?: string;
 }
 
-export default function Task({ task }: IProps) {
-  return <div>Task</div>;
+export default function Task({ task, className }: IProps) {
+  return (
+    <Substrate className={cn(styles.root, className)}>
+      <div className={styles.topInfo}>
+        <div className={styles.left}>
+          <div className={styles.iconWrapper}>
+            <task.icon size={20} color="var(--primary)" />
+          </div>
+
+          <div className={styles.topInfoText}>
+            <CustomTitle tag="h3" className={styles.title}>
+              {task.title}
+            </CustomTitle>
+
+            <div className={styles.duration}>
+              Осталось дней: {differenceInDays(task.dueDate, new Date())}
+            </div>
+          </div>
+        </div>
+
+        <div className={styles.usersImages}>
+          {task.users.map((user) => (
+            <Image
+              width={25}
+              height={25}
+              key={user.id}
+              alt=""
+              src={user.avatarPath ? user.avatarPath : ""}
+            />
+          ))}
+        </div>
+      </div>
+    </Substrate>
+  );
 }

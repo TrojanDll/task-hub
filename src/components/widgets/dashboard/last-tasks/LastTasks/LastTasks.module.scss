@@ -10,4 +10,10 @@
 
 .tasks {
   margin-top: 16px;
+  display: flex;
+  gap: 12px;
+}
+
+.task {
+  width: 100%;
 }

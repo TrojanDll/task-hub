@@ -21,7 +21,9 @@ export default function LastTasks({ className }: IProps) {
 
       <div className={styles.tasks}>
         {TASKS.length ? (
-          TASKS.map((task) => <Task key={task.id} task={task} />)
+          TASKS.map((task) => (
+            <Task key={task.id} task={task} className={styles.task} />
+          ))
         ) : (
           <div>Нет задач</div>
         )}
