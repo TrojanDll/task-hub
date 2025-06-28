@@ -1,3 +1,5 @@
+"use state";
+
 import type { ITask } from "@/types/task.types";
 import styles from "./Task.module.scss";
 import cn from "clsx";
@@ -5,6 +7,8 @@ import CustomTitle from "../../CustomTitle/CustomTitle";
 import { differenceInDays } from "date-fns";
 import Image from "next/image";
 import Substrate from "../../Substrate/Substrate";
+import ImagesList from "../../ImagesList/ImagesList";
+import { useEffect, useState } from "react";
 
 interface IProps {
   task: ITask;
@@ -12,6 +16,16 @@ interface IProps {
 }
 
 export default function Task({ task, className }: IProps) {
+  const [userProfileImages, setUserProfileImages] = useState<string[]>([]);
+  useEffect(() => {
+    let newUserProfileImages: string[] = [];
+    task.users.forEach((user) => {
+      newUserProfileImages.push(user.avatarPath ? user.avatarPath : "");
+    });
+
+    setUserProfileImages(newUserProfileImages);
+  }, []);
+
   return (
     <Substrate className={cn(styles.root, className)}>
       <div className={styles.topInfo}>
@@ -31,17 +45,7 @@ export default function Task({ task, className }: IProps) {
           </div>
         </div>
 
-        <div className={styles.usersImages}>
-          {task.users.map((user) => (
-            <Image
-              width={25}
-              height={25}
-              key={user.id}
-              alt=""
-              src={user.avatarPath ? user.avatarPath : ""}
-            />
-          ))}
-        </div>
+        <ImagesList imagesPaths={userProfileImages} />
       </div>
     </Substrate>
   );

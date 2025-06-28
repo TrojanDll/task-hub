@@ -38,7 +38,7 @@ export const TASKS: ITask[] = [
     comments: ["Комментарий", "Еще один комментарий", "И еще один комментарий"],
     resources: ["", "", "", "", "", ""],
     links: ["https://example.com", "https://example.org"],
-    users: [USERS[0], USERS[1]],
+    users: [USERS[0], USERS[1], USERS[2]],
     subTasks: [
       {
         id: "1",

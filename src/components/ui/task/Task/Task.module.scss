@@ -6,10 +6,22 @@
   display: flex;
   column-gap: 6px;
   align-items: center;
-  max-width: 60%;
+  max-width: calc(100% - 65px);
+}
+
+.topInfoText {
+  width: 100%;
+  overflow: hidden !important;
+}
+
+.title {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
 }
 
 .iconWrapper {
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
   display: flex;
@@ -24,3 +36,4 @@
   font-size: 0.875rem;
   color: var(--text-secondary);
 }
+
