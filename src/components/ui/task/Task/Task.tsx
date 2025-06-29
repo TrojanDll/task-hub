@@ -5,12 +5,15 @@ import styles from "./Task.module.scss";
 import cn from "clsx";
 import CustomTitle from "../../CustomTitle/CustomTitle";
 import { differenceInDays } from "date-fns";
-import Image from "next/image";
 import Substrate from "../../Substrate/Substrate";
 import ImagesList from "../../ImagesList/ImagesList";
 import { useEffect, useState } from "react";
 import ProgressBar from "../../ProgressBar/ProgressBar";
 import { taskPercentage } from "@/utils/task-percentage";
+import { MessageCircleMore, Pencil } from "lucide-react";
+import { Image as LucideImage } from "lucide-react";
+import { Link as LucideLink } from "lucide-react";
+import Button from "../../button/Button/Button";
 
 interface IProps {
   task: ITask;
@@ -56,7 +59,29 @@ export default function Task({ task, className }: IProps) {
       />
 
       <div className={styles.controlWrapper}>
-        
+        <div className={styles.stats}>
+          <div className={styles.statsItem}>
+            <MessageCircleMore size={16} className={styles.statsItemIcon} />
+            <div className={styles.statsItemCount}>{task.comments.length}</div>
+          </div>
+
+          <div className={styles.statsItem}>
+            <LucideImage size={16} className={styles.statsItemIcon} />
+            <div className={styles.statsItemCount}>{task.comments.length}</div>
+          </div>
+
+          <div className={styles.statsItem}>
+            <LucideLink size={16} className={styles.statsItemIcon} />
+            <div className={styles.statsItemCount}>{task.comments.length}</div>
+          </div>
+        </div>
+
+        <div className={styles.editWrapper}>
+          <Button>+</Button>
+          <Button type="outlined">
+            <Pencil size={14} className={styles.editButtonIcon} />
+          </Button>
+        </div>
       </div>
     </Substrate>
   );

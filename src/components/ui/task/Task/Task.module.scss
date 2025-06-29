@@ -37,3 +37,44 @@
   color: var(--text-secondary);
 }
 
+.editButtonIcon {
+  color: var(--primary);
+}
+
+.controlWrapper {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stats {
+  display: flex;
+  column-gap: 14px;
+  align-items: center;
+}
+
+.statsItem {
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+}
+
+.statsItemIcon {
+  color: var(--text-secondary);
+}
+
+.statsItemCount {
+  font-size: 0.875rem;
+}
+
+.editWrapper {
+  display: flex;
+  column-gap: 6px;
+}
+
+:global(.dark) {
+  .iconWrapper {
+    background-color: var(--dark-500);
+  }
+}

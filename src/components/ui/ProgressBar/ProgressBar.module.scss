@@ -21,4 +21,11 @@
 .percentage {
   display: flex;
   column-gap: 5px;
+  font-weight: 500;
+}
+
+:global(.dark) {
+  .root {
+    background-color: var(--dark-500);
+  }
 }

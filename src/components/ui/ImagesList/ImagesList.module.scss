@@ -12,3 +12,9 @@
   margin-left: -10px;
   border: 2px solid var(--white);
 }
+
+:global(.dark) {
+  .profileContainer {
+    border: 2px solid var(--text-secondary);
+  }
+}
