@@ -9,6 +9,8 @@ import Image from "next/image";
 import Substrate from "../../Substrate/Substrate";
 import ImagesList from "../../ImagesList/ImagesList";
 import { useEffect, useState } from "react";
+import ProgressBar from "../../ProgressBar/ProgressBar";
+import { taskPercentage } from "@/utils/task-percentage";
 
 interface IProps {
   task: ITask;
@@ -46,6 +48,15 @@ export default function Task({ task, className }: IProps) {
         </div>
 
         <ImagesList imagesPaths={userProfileImages} />
+      </div>
+
+      <ProgressBar
+        bgColor={task.color}
+        progressPercentage={taskPercentage(task)}
+      />
+
+      <div className={styles.controlWrapper}>
+        
       </div>
     </Substrate>
   );

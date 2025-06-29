@@ -39,6 +39,7 @@ export const TASKS: ITask[] = [
     resources: ["", "", "", "", "", ""],
     links: ["https://example.com", "https://example.org"],
     users: [USERS[0], USERS[1], USERS[2]],
+    color: "#1ac0aa",
     subTasks: [
       {
         id: "1",
@@ -76,6 +77,7 @@ export const TASKS: ITask[] = [
     resources: ["", "", ""],
     links: ["https://example.com", "https://example.org"],
     users: [USERS[0], USERS[1]],
+    color: "#f8c022",
     subTasks: [
       {
         id: "1",
@@ -85,12 +87,12 @@ export const TASKS: ITask[] = [
       {
         id: "2",
         title: "Какая то еще подтаска",
-        isCompleted: false,
+        isCompleted: true,
       },
       {
         id: "3",
         title: "Задача",
-        isCompleted: false,
+        isCompleted: true,
       },
       {
         id: "4",

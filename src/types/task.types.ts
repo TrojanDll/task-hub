@@ -15,4 +15,5 @@ export interface ITask extends Omit<ISubTask, "isCompleted"> {
   comments: string[];
   resources: string[];
   links: string[];
+  color?: string;
 }
