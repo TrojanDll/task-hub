@@ -1,13 +1,13 @@
 "use client";
 
+import LastTasks from "../last-tasks/LastTasks/LastTasks";
+import ProjectStatisticsChart from "../project-chart/ProjectStatisticsChart/ProjectStatisticsChart";
+import ProjectStats from "../project-stats/ProjectStats/ProjectStats";
 import styles from "./Dashboard.module.scss";
 
 import Heading from "@/components/ui/Heading/Heading";
-import SearchField from "@/components/ui/search-field/SearchField/SearchField";
 import ThemeToggler from "@/components/ui/ThemeToggler/ThemeToggler";
-import ProjectStats from "../project-stats/ProjectStats/ProjectStats";
-import ProjectStatisticsChart from "../project-chart/ProjectStatisticsChart/ProjectStatisticsChart";
-import LastTasks from "../last-tasks/LastTasks/LastTasks";
+import SearchField from "@/components/ui/search-field/SearchField/SearchField";
 
 export default function Dashboard() {
   return (
@@ -17,7 +17,10 @@ export default function Dashboard() {
           <Heading>Панель задач</Heading>
 
           <div className={styles.right}>
-            <SearchField onChange={() => {}} value="" />
+            <SearchField
+              onChange={() => {}}
+              value=""
+            />
             <ThemeToggler />
           </div>
         </div>

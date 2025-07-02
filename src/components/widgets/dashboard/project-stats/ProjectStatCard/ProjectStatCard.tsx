@@ -1,7 +1,7 @@
-import Image from "next/image";
 import type { IProjectStat } from "../project-stats.types";
-
 import styles from "./ProjectStatCard.module.scss";
+import Image from "next/image";
+
 import { formatMinutes } from "@/utils/format-minutes";
 
 interface IProps {
@@ -23,7 +23,12 @@ export default function ProjectStatCard({ projectStat }: IProps) {
         <div className={styles.label}>{projectStat.label}</div>
       </div>
 
-      <Image alt="" src={projectStat.icon} width={60} height={60} />
+      <Image
+        alt=""
+        src={projectStat.icon}
+        width={60}
+        height={60}
+      />
     </div>
   );
 }

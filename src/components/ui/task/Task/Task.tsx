@@ -1,19 +1,21 @@
 "use state";
 
-import type { ITask } from "@/types/task.types";
+import CustomTitle from "../../CustomTitle/CustomTitle";
+import ImagesList from "../../ImagesList/ImagesList";
+import ProgressBar from "../../ProgressBar/ProgressBar";
+import Substrate from "../../Substrate/Substrate";
+import Button from "../../button/Button/Button";
 import styles from "./Task.module.scss";
 import cn from "clsx";
-import CustomTitle from "../../CustomTitle/CustomTitle";
 import { differenceInDays } from "date-fns";
-import Substrate from "../../Substrate/Substrate";
-import ImagesList from "../../ImagesList/ImagesList";
-import { useEffect, useState } from "react";
-import ProgressBar from "../../ProgressBar/ProgressBar";
-import { taskPercentage } from "@/utils/task-percentage";
 import { MessageCircleMore, Pencil } from "lucide-react";
 import { Image as LucideImage } from "lucide-react";
 import { Link as LucideLink } from "lucide-react";
-import Button from "../../button/Button/Button";
+import { useEffect, useState } from "react";
+
+import { taskPercentage } from "@/utils/task-percentage";
+
+import type { ITask } from "@/types/task.types";
 
 interface IProps {
   task: ITask;
@@ -36,11 +38,17 @@ export default function Task({ task, className }: IProps) {
       <div className={styles.topInfo}>
         <div className={styles.left}>
           <div className={styles.iconWrapper}>
-            <task.icon size={20} color="var(--primary)" />
+            <task.icon
+              size={20}
+              color="var(--primary)"
+            />
           </div>
 
           <div className={styles.topInfoText}>
-            <CustomTitle tag="h3" className={styles.title}>
+            <CustomTitle
+              tag="h3"
+              className={styles.title}
+            >
               {task.title}
             </CustomTitle>
 
@@ -61,17 +69,26 @@ export default function Task({ task, className }: IProps) {
       <div className={styles.controlWrapper}>
         <div className={styles.stats}>
           <div className={styles.statsItem}>
-            <MessageCircleMore size={16} className={styles.statsItemIcon} />
+            <MessageCircleMore
+              size={16}
+              className={styles.statsItemIcon}
+            />
             <div className={styles.statsItemCount}>{task.comments.length}</div>
           </div>
 
           <div className={styles.statsItem}>
-            <LucideImage size={16} className={styles.statsItemIcon} />
+            <LucideImage
+              size={16}
+              className={styles.statsItemIcon}
+            />
             <div className={styles.statsItemCount}>{task.comments.length}</div>
           </div>
 
           <div className={styles.statsItem}>
-            <LucideLink size={16} className={styles.statsItemIcon} />
+            <LucideLink
+              size={16}
+              className={styles.statsItemIcon}
+            />
             <div className={styles.statsItemCount}>{task.comments.length}</div>
           </div>
         </div>
@@ -79,7 +96,10 @@ export default function Task({ task, className }: IProps) {
         <div className={styles.editWrapper}>
           <Button>+</Button>
           <Button type="outlined">
-            <Pencil size={14} className={styles.editButtonIcon} />
+            <Pencil
+              size={14}
+              className={styles.editButtonIcon}
+            />
           </Button>
         </div>
       </div>
