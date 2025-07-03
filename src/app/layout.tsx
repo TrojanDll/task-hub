@@ -1,28 +1,31 @@
-import type { Metadata } from "next";
 import "./globals.scss";
+import { Providers } from "./providers";
+import type { Metadata } from "next";
 
 import { SITE_NAME } from "@/constants/seo.constants";
-import { Providers } from "./providers";
 
 export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    shortcut: "/favicon.svg"
   },
   title: {
     absolute: SITE_NAME,
-    template: `%s | ${SITE_NAME}`,
+    template: `%s | ${SITE_NAME}`
   },
-  description: "Task Hub",
+  description: "Task Hub"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru" suppressHydrationWarning>
+    <html
+      lang="ru"
+      suppressHydrationWarning
+    >
       <body>
         <Providers>{children}</Providers>
       </body>

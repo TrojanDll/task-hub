@@ -1,3 +1,7 @@
+.root {
+  max-width: 100%;
+}
+
 .heading {
   display: flex;
   align-items: center;
@@ -16,4 +20,14 @@
 
 .task {
   width: 100%;
+}
+
+.slider {
+  width: 100%;
+}
+
+.sliderWrapper {
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
 }

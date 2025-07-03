@@ -41,6 +41,9 @@ importers:
       sass:
         specifier: ^1.89.2
         version: 1.89.2
+      swiper:
+        specifier: ^11.2.10
+        version: 11.2.10
       uuid:
         specifier: ^11.1.0
         version: 11.1.0
@@ -1516,6 +1519,10 @@ packages:
         optional: true
       babel-plugin-macros:
         optional: true
+
+  swiper@11.2.10:
+    resolution: {integrity: sha512-RMeVUUjTQH+6N3ckimK93oxz6Sn5la4aDlgPzB+rBrG/smPdCTicXyhxa+woIpopz+jewEloiEE3lKo1h9w2YQ==}
+    engines: {node: '>= 4.7.0'}
 
   tiny-invariant@1.3.3:
     resolution: {integrity: sha512-+FbBPE1o9QAYvviau/qC5SE3caw21q3xkvWKBtja5vgqOWIHHJ3ioaq1VPfn/Szqctz2bU/oYeKd9/z5BL+PVg==}
@@ -3033,6 +3040,8 @@ snapshots:
     dependencies:
       client-only: 0.0.1
       react: 19.1.0
+
+  swiper@11.2.10: {}
 
   tiny-invariant@1.3.3: {}
 
