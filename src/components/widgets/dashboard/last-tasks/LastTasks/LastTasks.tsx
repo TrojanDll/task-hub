@@ -3,6 +3,7 @@
 import { TASKS } from "../last-tasks.data";
 import styles from "./LastTasks.module.scss";
 import cn from "clsx";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Swiper, type SwiperClass, SwiperSlide } from "swiper/react";
 
@@ -26,14 +27,23 @@ export default function LastTasks({ className }: IProps) {
           Последние задачи{" "}
           <span className={styles.tasksCount}>({TASKS.length})</span>
         </CustomTitle>
-      </div>
 
-      <button
-        onClick={() => swiper?.slideNext()}
-        disabled={!swiper}
-      >
-        →
-      </button>
+        <div className={styles.swiperButtonsGroup}>
+          <button
+            className={styles.swiperButton}
+            onClick={() => swiper?.slidePrev()}
+          >
+            <ChevronLeft />
+          </button>
+
+          <button
+            className={styles.swiperButton}
+            onClick={() => swiper?.slideNext()}
+          >
+            <ChevronRight />
+          </button>
+        </div>
+      </div>
 
       <div className={styles.sliderWrapper}>
         <Swiper
