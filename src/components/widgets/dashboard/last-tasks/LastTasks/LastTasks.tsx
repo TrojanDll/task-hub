@@ -1,5 +1,6 @@
 "use client";
 
+import { LastTasksFilters } from "../LastTasksFilters/LastTasksFilters";
 import { TASKS } from "../last-tasks.data";
 import styles from "./LastTasks.module.scss";
 import cn from "clsx";
@@ -20,28 +21,40 @@ export default function LastTasks({ className }: IProps) {
   return (
     <div className={cn(styles.root, className)}>
       <div className={styles.heading}>
-        <CustomTitle
-          tag="h2"
-          className={styles.title}
-        >
-          Последние задачи{" "}
-          <span className={styles.tasksCount}>({TASKS.length})</span>
-        </CustomTitle>
-
-        <div className={styles.swiperButtonsGroup}>
-          <button
-            className={styles.swiperButton}
-            onClick={() => swiper?.slidePrev()}
+        <div className={styles.left}>
+          <CustomTitle
+            tag="h2"
+            className={styles.title}
           >
-            <ChevronLeft />
-          </button>
+            Последние задачи{" "}
+            <span className={styles.tasksCount}>({TASKS.length})</span>
+          </CustomTitle>
 
-          <button
-            className={styles.swiperButton}
-            onClick={() => swiper?.slideNext()}
-          >
-            <ChevronRight />
-          </button>
+          <div className={styles.swiperButtonsGroup}>
+            <button
+              className={styles.swiperButton}
+              onClick={() => swiper?.slidePrev()}
+            >
+              <ChevronLeft
+                size={20}
+                className={styles.swiperButtonIconLeft}
+              />
+            </button>
+
+            <button
+              className={styles.swiperButton}
+              onClick={() => swiper?.slideNext()}
+            >
+              <ChevronRight
+                size={20}
+                className={styles.swiperButtonIconRight}
+              />
+            </button>
+          </div>
+        </div>
+
+        <div className={styles.right}>
+          <LastTasksFilters />
         </div>
       </div>
 

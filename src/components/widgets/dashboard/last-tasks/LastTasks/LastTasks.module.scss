@@ -48,3 +48,16 @@
   justify-content: center;
   align-items: center;
 }
+
+.left,
+.right {
+  display: flex;
+  column-gap: 16px;
+  align-items: center;
+}
+
+:global(.dark) {
+  .swiperButton {
+    background-color: var(--dark);
+  }
+}

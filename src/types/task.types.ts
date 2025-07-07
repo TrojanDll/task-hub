@@ -1,5 +1,5 @@
-import type { LucideIcon } from "lucide-react";
 import type { IProfile } from "./profile.types";
+import type { LucideIcon } from "lucide-react";
 
 export interface ISubTask {
   id: string;
@@ -16,4 +16,10 @@ export interface ITask extends Omit<ISubTask, "isCompleted"> {
   resources: string[];
   links: string[];
   color?: string;
+}
+
+export enum ETaskStatuses {
+  NOT_STARTED = "not-started",
+  IN_PROGRESS = "in-progress",
+  COMPLETED = "completed"
 }
