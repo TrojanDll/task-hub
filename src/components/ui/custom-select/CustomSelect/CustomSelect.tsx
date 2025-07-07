@@ -1,10 +1,9 @@
+import type { ISelectOption } from "../custom-select.types";
+import styles from "./CustomSelect.module.scss";
+import cn from "clsx";
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "lucide-react";
 import { Select } from "radix-ui";
 import React from "react";
-
-import cn from "clsx";
-import styles from "./CustomSelect.module.scss";
-import type { ISelectOption } from "../custom-select.types";
 
 interface IProps {
   className?: string;
@@ -12,6 +11,8 @@ interface IProps {
   value: ISelectOption;
   setValue: (value: ISelectOption) => void;
   options?: ISelectOption[];
+  side?: "top" | "right" | "bottom" | "left";
+  align?: "start" | "center" | "end";
 }
 
 export default function CustomSelect({
@@ -20,14 +21,15 @@ export default function CustomSelect({
   options = [],
   value,
   setValue,
+  side = "bottom",
+  align = "start"
 }: IProps) {
   const handleValueChange = (selectedValue: string) => {
-    // Находим полный объект option по значению
     const selectedOption = options.find(
       (option) => option.value === selectedValue
     );
     if (selectedOption) {
-      setValue(selectedOption); // Теперь передаем полный объект
+      setValue(selectedOption);
     }
   };
 
@@ -37,7 +39,10 @@ export default function CustomSelect({
       onValueChange={(handledValue: string) => handleValueChange(handledValue)}
     >
       <Select.Trigger className={cn(styles.SelectTrigger, className)}>
-        <Select.Value defaultValue={defaultValue?.value} placeholder="Период" />
+        <Select.Value
+          defaultValue={defaultValue?.value}
+          placeholder="Период"
+        />
         <Select.Icon className={styles.SelectIcon}>
           <ChevronDownIcon size={14} />
         </Select.Icon>
@@ -45,7 +50,8 @@ export default function CustomSelect({
       <Select.Portal>
         <Select.Content
           position="popper"
-          side="bottom"
+          side={side}
+          align={align}
           sideOffset={2}
           className={styles.SelectContent}
         >

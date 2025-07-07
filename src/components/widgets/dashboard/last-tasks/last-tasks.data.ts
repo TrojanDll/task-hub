@@ -35,7 +35,7 @@ export const TASKS: ITask[] = [
     id: "2",
     title: "Какой то крутой проект",
     icon: FolderKanban,
-    dueDate: new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000),
+    dueDate: new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000),
     comments: ["Комментарий", "Еще один комментарий", "И еще один комментарий"],
     resources: ["", "", "", "", "", ""],
     links: ["https://example.com", "https://example.org"],
@@ -73,7 +73,7 @@ export const TASKS: ITask[] = [
     id: "3",
     title: "Большая задача",
     icon: BookCheck,
-    dueDate: new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000),
+    dueDate: new Date(new Date().getTime() + 6 * 24 * 60 * 60 * 1000),
     comments: ["Комментарий", "Еще один комментарий", "И еще один комментарий"],
     resources: ["", "", ""],
     links: ["https://example.com", "https://example.org"],
@@ -116,22 +116,22 @@ export const TASKS: ITask[] = [
       {
         id: "1",
         title: "Какая то важная подтаска",
-        isCompleted: true
+        isCompleted: false
       },
       {
         id: "2",
         title: "Какая то еще подтаска",
-        isCompleted: true
+        isCompleted: false
       },
       {
         id: "3",
         title: "Задача",
-        isCompleted: true
+        isCompleted: false
       },
       {
         id: "4",
         title: "Задача",
-        isCompleted: true
+        isCompleted: false
       }
     ]
   },
@@ -139,7 +139,7 @@ export const TASKS: ITask[] = [
     id: "5",
     title: "Большая задача",
     icon: BookCheck,
-    dueDate: new Date(new Date().getTime() + 2 * 24 * 60 * 60 * 1000),
+    dueDate: new Date(new Date().getTime() + 3 * 24 * 60 * 60 * 1000),
     comments: ["Комментарий", "Еще один комментарий", "И еще один комментарий"],
     resources: ["", "", ""],
     links: ["https://example.com", "https://example.org"],

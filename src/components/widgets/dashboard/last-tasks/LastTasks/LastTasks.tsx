@@ -11,12 +11,15 @@ import { Swiper, type SwiperClass, SwiperSlide } from "swiper/react";
 import CustomTitle from "@/components/ui/CustomTitle/CustomTitle";
 import Task from "@/components/ui/task/Task/Task";
 
+import type { ITask } from "@/types/task.types";
+
 interface IProps {
   className?: string;
 }
 
 export default function LastTasks({ className }: IProps) {
   const [swiper, setSwiper] = useState<SwiperClass | null>(null);
+  const [filteredTasks, setFilteredTasks] = useState<ITask[]>(TASKS);
 
   return (
     <div className={cn(styles.root, className)}>
@@ -54,7 +57,10 @@ export default function LastTasks({ className }: IProps) {
         </div>
 
         <div className={styles.right}>
-          <LastTasksFilters />
+          <LastTasksFilters
+            tasks={TASKS}
+            setFilteredTasks={setFilteredTasks}
+          />
         </div>
       </div>
 
@@ -64,8 +70,8 @@ export default function LastTasks({ className }: IProps) {
           slidesPerView={3}
           onSwiper={setSwiper}
         >
-          {TASKS.length ? (
-            TASKS.slice(0, 10).map((task) => (
+          {filteredTasks.length ? (
+            filteredTasks.slice(0, 10).map((task) => (
               <SwiperSlide
                 key={task.id}
                 className={styles.slide}

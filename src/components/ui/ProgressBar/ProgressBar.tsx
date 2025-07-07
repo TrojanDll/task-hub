@@ -16,7 +16,13 @@ export default function ProgressBar({
   bgColor = "var(--primary)"
 }: IProps) {
   return (
-    <div className={cn(styles.root, className)}>
+    <div
+      className={cn(
+        styles.root,
+        className,
+        progressPercentage === 0 && styles.notStarted
+      )}
+    >
       <div
         style={{
           background: generateRepeatingLinearGradient(bgColor),
@@ -36,6 +42,9 @@ export default function ProgressBar({
           ""
         )}
       </div>
+      {progressPercentage === 0 && (
+        <div className={styles.percentage}>Не начато</div>
+      )}
     </div>
   );
 }
