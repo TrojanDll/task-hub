@@ -52,7 +52,7 @@ export default function CustomSelect({
           position="popper"
           side={side}
           align={align}
-          sideOffset={2}
+          sideOffset={4}
           className={styles.SelectContent}
         >
           <Select.Viewport className={styles.SelectViewport}>

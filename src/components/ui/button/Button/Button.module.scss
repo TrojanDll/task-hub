@@ -9,6 +9,8 @@
   &:hover:not(.outlined) {
     background-color: var(--primary-300);
   }
+
+  box-shadow: var(--shadow);
 }
 
 .rounded {

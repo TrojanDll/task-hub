@@ -1,0 +1,23 @@
+.root {
+  display: flex;
+  column-gap: 8px;
+  align-items: center;
+}
+
+.sortButton {
+  background-color: var(--white) !important;
+}
+
+.sortButtonIcon {
+  color: #000000;
+}
+
+:global(.dark) {
+  .sortButton {
+    background-color: var(--dark-500) !important;
+  }
+
+  .sortButtonIcon {
+    color: var(--white);
+  }
+}

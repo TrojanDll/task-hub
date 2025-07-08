@@ -46,7 +46,8 @@
 
 :global(.dark) {
   .SelectTrigger {
-    border: 1px solid var(--white);
+    border: none;
+    // border: 1px solid var(--white);
     background-color: var(--dark-500);
   }
 
