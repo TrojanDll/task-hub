@@ -2,6 +2,7 @@
 
 import CustomTitle from "../../CustomTitle/CustomTitle";
 import ImagesList from "../../ImagesList/ImagesList";
+import Modal from "../../Modal/Modal";
 import ProgressBar from "../../ProgressBar/ProgressBar";
 import Substrate from "../../Substrate/Substrate";
 import Button from "../../button/Button/Button";
@@ -24,13 +25,16 @@ interface IProps {
 
 export default function Task({ task, className }: IProps) {
   const [userProfileImages, setUserProfileImages] = useState<string[]>([]);
+  const [isEditModalOpen, setIsEditModalOpen] = useState<boolean>(false);
+
   useEffect(() => {
-    let newUserProfileImages: string[] = [];
+    let userProfileImagesPaths: string[] = [];
+
     task.users.forEach((user) => {
-      newUserProfileImages.push(user.avatarPath ? user.avatarPath : "");
+      userProfileImagesPaths.push(user.avatarPath ? user.avatarPath : "");
     });
 
-    setUserProfileImages(newUserProfileImages);
+    setUserProfileImages(userProfileImagesPaths);
   }, []);
 
   return (
@@ -95,7 +99,10 @@ export default function Task({ task, className }: IProps) {
 
         <div className={styles.editWrapper}>
           <Button>+</Button>
-          <Button type="outlined">
+          <Button
+            type="outlined"
+            onClick={() => setIsEditModalOpen(true)}
+          >
             <Pencil
               size={14}
               className={styles.editButtonIcon}
@@ -103,6 +110,11 @@ export default function Task({ task, className }: IProps) {
           </Button>
         </div>
       </div>
+
+      <Modal
+        isOpen={isEditModalOpen}
+        setIsOpen={setIsEditModalOpen}
+      />
     </Substrate>
   );
 }

@@ -1,14 +1,20 @@
 import styles from "./layout.module.scss";
-import type { PropsWithChildren } from "react";
+import type { PropsWithChildren, ReactNode } from "react";
 import "swiper/css";
 
 import Sidebar from "@/components/widgets/layout/sidebar/Sidebar/Sidebar";
 
-export default function DashboardLayout({ children }: PropsWithChildren) {
+interface IProps {
+  children: ReactNode;
+  modals: ReactNode;
+}
+
+export default function DashboardLayout({ children, modals }: IProps) {
   return (
     <div className={styles.root}>
       <Sidebar />
       <main className={styles.main}>{children}</main>
+      {modals}
     </div>
   );
 }
