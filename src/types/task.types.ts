@@ -21,5 +21,7 @@ export interface ITask extends Omit<ISubTask, "isCompleted"> {
 export enum ETaskStatuses {
   NOT_STARTED = "not-started",
   IN_PROGRESS = "in-progress",
-  COMPLETED = "completed"
+  COMPLETED = "completed",
 }
+
+export type TTaskFormData = Pick<ITask, "title" | "dueDate" | "icon">;

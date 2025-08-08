@@ -2,7 +2,6 @@
 
 import CustomTitle from "../../CustomTitle/CustomTitle";
 import ImagesList from "../../ImagesList/ImagesList";
-import Modal from "../../Modal/Modal";
 import ProgressBar from "../../ProgressBar/ProgressBar";
 import Substrate from "../../Substrate/Substrate";
 import Button from "../../button/Button/Button";
@@ -13,6 +12,8 @@ import { MessageCircleMore, Pencil } from "lucide-react";
 import { Image as LucideImage } from "lucide-react";
 import { Link as LucideLink } from "lucide-react";
 import { useEffect, useState } from "react";
+
+import EditTaskModal from "@/components/widgets/dashboard/last-tasks/EditTaskModal/EditTaskModal";
 
 import { taskPercentage } from "@/utils/task-percentage";
 
@@ -111,7 +112,7 @@ export default function Task({ task, className }: IProps) {
         </div>
       </div>
 
-      <Modal
+      <EditTaskModal
         isOpen={isEditModalOpen}
         setIsOpen={setIsEditModalOpen}
       />
